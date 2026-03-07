@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #111827;
+    color: #f9fafb;
+    min-height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-primary-500/30 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-dark-800 hover:bg-dark-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 border border-dark-600;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary-500 text-primary-400 hover:bg-primary-500 hover:text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 active:scale-95;
+  }
+
+  .card {
+    @apply bg-dark-900 border border-dark-700 rounded-2xl p-6 shadow-xl;
+  }
+
+  .input-field {
+    @apply w-full bg-dark-800 border border-dark-600 text-white placeholder-dark-400 rounded-xl px-4 py-3 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors duration-200;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-dark-300 mb-1.5;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .status-requested {
+    @apply badge bg-yellow-500/20 text-yellow-400;
+  }
+
+  .status-accepted {
+    @apply badge bg-blue-500/20 text-blue-400;
+  }
+
+  .status-driver_arriving {
+    @apply badge bg-purple-500/20 text-purple-400;
+  }
+
+  .status-in_progress {
+    @apply badge bg-primary-500/20 text-primary-400;
+  }
+
+  .status-completed {
+    @apply badge bg-green-500/20 text-green-400;
+  }
+
+  .status-cancelled {
+    @apply badge bg-red-500/20 text-red-400;
+  }
+
+  .glass {
+    @apply bg-white/5 border border-white/10 backdrop-blur-md;
+  }
+}
+
+/* Leaflet map overrides */
+.leaflet-container {
+  background: #1c2333 !important;
+  border-radius: 1rem;
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+}
+
+.leaflet-control-zoom a {
+  background: #1c2333 !important;
+  color: #f9fafb !important;
+  border: 1px solid #374151 !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #374151 !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c2333;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4B5563;
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
