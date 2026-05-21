@@ -274,9 +274,9 @@ This project was collaboratively developed by the following team members:
 | Name | Role | Email |
 |------|------|-------|
 | **Sanjeev Kumar** | Team Lead | sanjeevkumar191384@gmail.com |
-| **Akshra Sharma** | Member | sharma.akshra675@gmail.com |
-| **Shivang Kumar** | Member | shivangkumar005@gmail.com |
-| **Shrishti Warude** | Member | shrishtiwarude24@gmail.com |
+| **Sanjay kushwaha** | Member | 
+| **Sitanshu ranjan** | Member |
+ 
 
 ---
 
